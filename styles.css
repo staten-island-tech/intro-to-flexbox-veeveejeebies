@@ -4,19 +4,19 @@
 }
 
 .child-1 {
-  background-color: cyan;
+  background-color: rgb(213, 181, 255);
 }
 
 .child-2 {
-  background-color: green;
+  background-color: rgb(180, 181, 255);
 }
 
 .child-3 {
-  background-color: yellow;
+  background-color: rgb(203, 255, 220);
 }
 
 .child-4 {
-  background-color: aqua;
+  background-color: rgb(189, 218, 255);
 }
 
 html, body {
@@ -25,7 +25,7 @@ html, body {
   font-size: 62.5%;
   margin: 0;
   padding: 0;
-  background-color: rgbrgb(255, 179, 242);
+  background-color: rgb(255, 179, 242);
 }
 
 .parent {
@@ -33,7 +33,7 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   font-size: 3rem;
-  background-color: lightcoral;
+  background-color: rgb(188, 113, 218);
   border: 5px solid red;
 }
 
