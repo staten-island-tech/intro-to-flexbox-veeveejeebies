@@ -22,8 +22,9 @@
    flex: 1;
     height: 90%;
     text-align: center;
-    background-color: rgb(184, 233, 181);
-    border: 1px solid #ccc;
+    background-color: rgb(251, 204, 255);
+    border: 1px solid #d8e1ff;
+    border-width: 10px;
      margin: 50px auto;
 }
 
@@ -31,8 +32,9 @@
    flex: 1;
     height: 90%;
     text-align: center;
-    background-color: rgb(184, 233, 181);
-    border: 1px solid #ccc;
+    background-color: rgb(168, 177, 253);
+    border: 1px solid #d8e1ff;
+    border-width: 10px;
      margin: 50px auto;
 }
 
@@ -40,8 +42,9 @@
    flex: 1;
     height: 90%;
     text-align: center;
-    background-color: rgb(184, 233, 181);
-    border: 1px solid #ccc;
+    background-color: rgb(177, 245, 217);
+    border: 1px solid #d8e1ff;
+    border-width: 10px;
      margin: 50px auto;
 }
   
@@ -51,8 +54,9 @@
   flex: 1;
     height: 90%;
     text-align: center;
-    background-color: rgb(184, 233, 181);
-    border: 1px solid #ccc;
+    background-color: rgb(243, 186, 186);
+    border: 1px solid #d8e1ff;
+    border-width: 10px;
      margin: 50px auto;
 }
 
