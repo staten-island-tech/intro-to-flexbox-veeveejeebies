@@ -9,46 +9,57 @@
 }
 
 .child {
-  padding: 1rem;
-  display: inline-block;
-  background: blue;
-  margin: 10px 0 0 10px;
-  flex-grow: 1;
-  height: 100px;
+ border: 5px solid rgb(213, 162, 234);
+    width: 100%;
+    height: 75%;
+    align-items: center;
+    display: flex;
+     margin: 100px auto;
 }
 
 
 .child-1 {
-  background-color: rgb(213, 181, 255);
-  display: flex;
-  justify-content: space-evenly;
-  margin: 50px;
+   flex: 1;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(184, 233, 181);
+    border: 1px solid #ccc;
+     margin: 50px auto;
 }
 
 .child-2 {
-  background-color: rgb(180, 181, 255);
-  display: flex;
-  justify-content: space-evenly;
-  margin: 50px;
+   flex: 1;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(184, 233, 181);
+    border: 1px solid #ccc;
+     margin: 50px auto;
 }
 
 .child-3 {
-  background-color: rgb(203, 255, 220);
-   display: flex;
-  justify-content: space-evenly;
-   padding: 1px 10px 10px;
-   margin: 50px;
+   flex: 1;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(184, 233, 181);
+    border: 1px solid #ccc;
+     margin: 50px auto;
 }
   
 
 
 .child-4 {
-  background-color: rgb(189, 218, 255);
-  display: flex;
-  justify-content: space-evenly;
-  margin: 50px;
+  flex: 1;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(184, 233, 181);
+    border: 1px solid #ccc;
+     margin: 50px auto;
 }
 
+.h2 {
+  font-size: 50px auto;
+  margin-top: 40px auto;
+}
 
 html, body {
   -webkit-box-sizing: border-box;
@@ -60,14 +71,12 @@ html, body {
 }
 
 .parent {
-  width: 5px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 3rem;
-  background-color: rgb(188, 180, 255);
-  margin: 50px;
+  border-color: rgb(133, 102, 227);
+    width: 100%;
+    height: 75%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .parent-intro {
