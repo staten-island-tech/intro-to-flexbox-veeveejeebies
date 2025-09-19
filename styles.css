@@ -1,109 +1,120 @@
 .title {
-  background-color:   rgb(186, 123, 211);
+  background-color: rgb(216, 155, 240);
   text-align: center;
   width: 1000px;
   margin: 100px auto;
-  padding: 0px, ;
+  padding: 0px;
   font-size: 50px;
-
+  font-family: "Kranky", serif;
 }
+
+h1 {
+   font-family: "Story Script";
+  padding-bottom: 10px;
+  font-size: 60px;
+  color: rgb(59, 5, 5);
+  margin-top: 0;
+}
+
+h2
 
 .child {
- border: 5px solid rgb(213, 162, 234);
-    width: 100%;
-    height: 75%;
-    align-items: center;
-    display: flex;
-     margin: 100px auto;
+  border: 5px solid rgb(213, 162, 234);
+  width: 100%;
+  height: 75%;
+  align-items: center;
+  display: flex;
+  margin: 100px auto;
 }
 
-
 .child-1 {
-   flex: 1;
-    height: 90%;
-    text-align: center;
-    background-color: rgb(251, 204, 255);
-    border: 1px solid #d8e1ff;
-    border-width: 10px;
-     margin: 50px auto;
+  flex: 1;
+  height: 90%;
+  text-align: center;
+  background-color: rgb(251, 204, 255);
+  border: 1px solid #d8e1ff;
+  border-width: 10px;
+  margin: 50px auto;
 }
 
 .child-2 {
-   flex: 1;
-    height: 90%;
-    text-align: center;
-    background-color: rgb(168, 177, 253);
-    border: 1px solid #d8e1ff;
-    border-width: 10px;
-     margin: 50px auto;
+  flex: 1;
+  height: 90%;
+  text-align: center;
+  background-color: rgb(168, 177, 253);
+  border: 1px solid #d8e1ff;
+  border-width: 10px;
+  margin: 50px auto;
 }
 
 .child-3 {
-   flex: 1;
-    height: 90%;
-    text-align: center;
-    background-color: rgb(177, 245, 217);
-    border: 1px solid #d8e1ff;
-    border-width: 10px;
-     margin: 50px auto;
+  flex: 1;
+  height: 90%;
+  text-align: center;
+  background-color: rgb(177, 245, 217);
+  border: 1px solid #d8e1ff;
+  border-width: 10px;
+  margin: 50px auto;
 }
-  
 
+
+img {
+  width: 350px; /* Set a fixed width */
+  height: 400px; /* Set a fixed height */
+  object-fit: cover; /* Controls how the image fits within the dimensions */
+}
 
 .child-4 {
   flex: 1;
-    height: 90%;
-    text-align: center;
-    background-color: rgb(243, 186, 186);
-    border: 1px solid #d8e1ff;
-    border-width: 10px;
-     margin: 50px auto;
+  height: 90%;
+  text-align: center;
+  background-color: rgb(243, 186, 186);
+  border: 1px solid #d8e1ff;
+  border-width: 10px;
+  margin: 50px auto;
 }
 
-.h2 {
-  font-size: 50px auto;
-  margin-top: 40px auto;
-}
-
-html, body {
+html,
+body {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Titan One", sans-serif;
   font-size: 62.5%;
   margin: 0;
   padding: 0;
-  background-color: rgb(255, 179, 242);
+  background-color: rgb(255, 221, 249);
 }
 
 .parent {
   border-color: rgb(133, 102, 227);
-    width: 100%;
-    height: 75%;
-    align-items: center;
-    display: flex;
-    justify-content: space-evenly;
+  width: 100%;
+  height: 75%;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .parent-intro {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .parent-spacing {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .parent-flexconstants .child-1 {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .parent-flexconstants .child-2 {
   -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
 }
