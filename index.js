@@ -153,7 +153,10 @@ plushies.forEach((plushie) => {
 });
 
 function addToCart() {
-  const buttons = document.querySelectorAll()
+  const buttons = document.querySelectorAll("button");
+  //creates array if we need more than forEach
+  const btnArray = Array.from(buttons);
+  btnArray.forEach((btn) => btn.addEventListener("click", function))
 }
 //function inject(items) {
   //do something
