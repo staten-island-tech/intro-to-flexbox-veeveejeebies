@@ -126,7 +126,7 @@ const items = [
     alt: "Nailong",
   },
   {
-    name: "Sonny Angle Berry",
+    name: "Sonny Angel Berry",
     category: "collectables",
     price: 19.99,
     image: "img/Nailong.jpeg",
@@ -148,23 +148,15 @@ const items = [
   },
 ];
 
-plushies.forEach((plushie) => {
+items.forEach((plushie) => {
   console.log(plushie.name);
 });
 
-function addToCart() {
-  const buttons = document.querySelectorAll("button");
-  //creates array if we need more than forEach
-  const btnArray = Array.from(buttons);
-  btnArray.forEach((btn) => btn.addEventListener("click", function))
-}
-//function inject(items) {
-  //do something
- // let category = "plushies";
+ function inject(item) {
 
-  //query the container
-  //using adjacent html push card into
-//}
-//products.forEach((product) => inject(product));
+  let name ="Labubu"
+  const container = document.querySelector(".parent");
+  container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
+ }
 
-//inject(products[0]);
+ inject(items[0]);
