@@ -160,3 +160,4 @@ items.forEach((plushie) => {
  }
 
  inject(items[0]);
+ inject(items[0]);
