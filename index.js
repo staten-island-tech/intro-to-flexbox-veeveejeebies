@@ -148,16 +148,11 @@ const items = [
   },
 ];
 
-items.forEach((plushie) => {
-  console.log(plushie.name);
-});
-
  function inject(item) {
 
   let name = item.name
   const container = document.querySelector(".parent");
   container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
  }
+ inject(items[0]);
 
- inject(items[0]);
- inject(items[0]);
