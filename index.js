@@ -148,6 +148,17 @@ const items = [
   },
 ];
 
+function addToCart() {
+  const buttons = document.querySelectorAll("button");
+
+  const btnArray = Array.from(buttons);
+  btnArray.forEach((btn) => btn.addEventListener("click", function(){
+
+  }))
+}
+addToCart();
+
+
  function inject(item) {
 
   let name = item.name
@@ -155,25 +166,6 @@ const items = [
   container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
  }
  inject(items[0]);
-  function inject(item) {
 
-  let name = item.name
-  const container = document.querySelector(".parent");
-  container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
- }
- inject(items[0]);
-  function inject(item) {
 
-  let name = item.name
-  const container = document.querySelector(".parent");
-  container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
- }
- inject(items[0]);
-  function inject(item) {
-
-  let name = item.name
-  const container = document.querySelector(".parent");
-  container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
- }
- inject(items[0]);
 
