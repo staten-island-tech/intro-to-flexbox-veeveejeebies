@@ -152,20 +152,16 @@ function addToCart() {
   const buttons = document.querySelectorAll("button");
 
   const btnArray = Array.from(buttons);
-  btnArray.forEach((btn) => btn.addEventListener("click", function(){
-
-  }))
+  btnArray.forEach((btn) =>
+    btn.addEventListener("click", function () {
+      function inject(item) {
+        let name = item.name;
+        const container = document.querySelector(".child-1");
+        container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
+      }
+      inject(items[0]);
+      
+    })
+  );
 }
 addToCart();
-
-
- function inject(item) {
-
-  let name = item.name
-  const container = document.querySelector(".parent");
-  container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
- }
- inject(items[0]);
-
-
-
