@@ -157,10 +157,9 @@ function addToCart() {
       function inject(item) {
         let name = item.name;
         const container = document.querySelector(".child-1");
-        container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
+        container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
       }
       inject(items[0]);
-      
     })
   );
 }
