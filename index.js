@@ -162,5 +162,11 @@ function addToCart() {
       inject(items[0]);
     })
   );
+function filterByGenre(genre) {
+  const display = document.getElementById("card-display");
+  display.innerHTML = "";
+  const filterItems 
+
+}
 }
 addToCart();
