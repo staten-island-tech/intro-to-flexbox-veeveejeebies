@@ -147,7 +147,43 @@ const items = [
     alt: "Nailong",
   },
 ];
+  addToCart();
 
+
+
+ function addToCart() {
+  const buttons = document.querySelectorAll("button");
+
+  const btnArray = Array.from(buttons);
+  btnArray.forEach((btn) =>
+    btn.addEventListener("click", function () {
+      function inject(items) {
+        let name = item.name;
+        const container = document.querySelector(".child-1");
+        container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
+      }
+      inject(items[0]);
+    })
+  );
+}
+addToCart();
+
+{  function addToCart() {
+  const buttons = document.querySelectorAll("button");
+
+  const btnArray = Array.from(buttons);
+  btnArray.forEach((btn) =>
+    btn.addEventListener("click", function () {
+      function inject(item) {
+        let name = item.name;
+        const container = document.querySelector(".child-2");
+        container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
+      }
+      inject(items[0]);
+    })
+  );
+
+}
 function addToCart() {
   const buttons = document.querySelectorAll("button");
 
@@ -156,17 +192,46 @@ function addToCart() {
     btn.addEventListener("click", function () {
       function inject(item) {
         let name = item.name;
-        const container = document.querySelector(".child-1");
+        const container = document.querySelector(".child-3");
         container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
       }
       inject(items[0]);
     })
   );
-function filterByGenre(genre) {
-  const display = document.getElementById("card-display");
-  display.innerHTML = "";
-  const filterItems 
 
 }
+function addToCart() {
+  const buttons = document.querySelectorAll("button");
+
+  const btnArray = Array.from(buttons);
+  btnArray.forEach((btn) =>
+    btn.addEventListener("click", function () {
+      function inject(item) {
+        let name = item.name;
+        const container = document.querySelector(".child-4");
+        container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
+      }
+      inject(items[0]);
+    })
+  );
+
+}
+
 }
 addToCart();
+ const cart = []; 
+function creatCartObject(product) {
+  const cartProduct = {...product, quantity: 1 };
+}
+function checkCart(cartProduct) {
+  const found= cart.find((cartItem) => cartItem.title === cartProduct.title);
+  if (found) {
+    found.quantity += 1;
+  }
+   else{
+    cart.push(prod);
+   }
+}
+checkCart(prod)
+checkCart(prod)
+console.log(cart);
