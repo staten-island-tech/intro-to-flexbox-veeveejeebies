@@ -156,10 +156,12 @@ const items = [
 
   const btnArray = Array.from(buttons);
   btnArray.forEach((btn) =>
-    btn.addEventListener("click", function () {
-      function inject(items) {
+    btn.addEventListener("click", function (event) {
+      console.log(
+        event.target.closest(".child-card").getAttribute("car")
+      function inject(item) {
         let name = item.name;
-        const container = document.querySelector(".child-1");
+        const container = document.querySelector(".cart-total");
         container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
       }
       inject(items[0]);
@@ -168,70 +170,6 @@ const items = [
 }
 addToCart();
 
-{  function addToCart() {
-  const buttons = document.querySelectorAll("button");
 
-  const btnArray = Array.from(buttons);
-  btnArray.forEach((btn) =>
-    btn.addEventListener("click", function () {
-      function inject(item) {
-        let name = item.name;
-        const container = document.querySelector(".child-2");
-        container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
-      }
-      inject(items[0]);
-    })
-  );
 
-}
-function addToCart() {
-  const buttons = document.querySelectorAll("button");
 
-  const btnArray = Array.from(buttons);
-  btnArray.forEach((btn) =>
-    btn.addEventListener("click", function () {
-      function inject(item) {
-        let name = item.name;
-        const container = document.querySelector(".child-3");
-        container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
-      }
-      inject(items[0]);
-    })
-  );
-
-}
-function addToCart() {
-  const buttons = document.querySelectorAll("button");
-
-  const btnArray = Array.from(buttons);
-  btnArray.forEach((btn) =>
-    btn.addEventListener("click", function () {
-      function inject(item) {
-        let name = item.name;
-        const container = document.querySelector(".child-4");
-        container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
-      }
-      inject(items[0]);
-    })
-  );
-
-}
-
-}
-addToCart();
- const cart = []; 
-function creatCartObject(product) {
-  const cartProduct = {...product, quantity: 1 };
-}
-function checkCart(cartProduct) {
-  const found= cart.find((cartItem) => cartItem.title === cartProduct.title);
-  if (found) {
-    found.quantity += 1;
-  }
-   else{
-    cart.push(prod);
-   }
-}
-checkCart(prod)
-checkCart(prod)
-console.log(cart);
