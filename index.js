@@ -147,28 +147,37 @@ const items = [
     alt: "Nailong",
   },
 ];
-  addToCart();
-
-
-
- function addToCart() {
-  const buttons = document.querySelectorAll("button");
-
-  const btnArray = Array.from(buttons);
-  btnArray.forEach((btn) =>
-    btn.addEventListener("click", function (event) {
-      console.log(
-        event.target.closest(".child-card").getAttribute("car")
-      function inject(item) {
-        let name = item.name;
-        const container = document.querySelector(".cart-total");
-        container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
-      }
-      inject(items[0]);
-    })
-  );
-}
 addToCart();
+
+function addToCart() {
+  const buttons = document.querySelectorAll("button");
+  const totalDisplay = document.getElementById("total");
+  let total = 0;
+
+  buttons.forEach((btn, index) => {
+    btn.addEventListener("click", function () {
+
+      const item = items[index];
+      total += item.price; //Item Price
+      // I had online help for Item Price calculation and the very bottom
+      totalDisplay.textContent = total.toFixed(2);
+
+      const container = document.querySelector(".cart-total");
+      container.insertAdjacentHTML(
+        "beforeend",
+        `<p>${item.name} ($${item.price.toFixed(2)})</p>`
+      );
+
+      console.log(`Added ${item.name} - new total: $${total.toFixed(2)}`);
+    }
+  );
+
+  }
+);
+}
+
+
+
 
 
 
