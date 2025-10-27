@@ -156,29 +156,16 @@ function addToCart() {
 
   buttons.forEach((btn, index) => {
     btn.addEventListener("click", function () {
-
       const item = items[index];
-      total += item.price; //Item Price
-      // I had online help for Item Price calculation and the very bottom
-      totalDisplay.textContent = total.toFixed(2);
+      total += item.price;
 
       const container = document.querySelector(".cart-total");
       container.insertAdjacentHTML(
         "beforeend",
-        `<p>${item.name} ($${item.price.toFixed(2)})</p>`
+        `<p> Added: ${item.name} (${item.price}) </p>`
       );
 
-      console.log(`Added ${item.name} - new total: $${total.toFixed(2)}`);
-    }
-  );
-
-  }
-);
+      console.log(`Added ${item.name} total: item.price `);
+    });
+  });
 }
-
-
-
-
-
-
-
