@@ -85,7 +85,7 @@ img {
   flex: 1;
   height: 90%;
   text-align: center;
-  background-color: rgb(243, 186, 186);
+  background-color: rgb(236, 194, 139);
   border: 1px solid #d8e1ff;
   border-width: 10px;
   margin: 50px auto;
@@ -100,7 +100,7 @@ body {
   font-size: 62.5%;
   margin: 0;
   padding: 0;
-  background-color: rgb(255, 221, 249);
+  background-color: rgb(255, 255, 255);
 }
 
 .parent {
