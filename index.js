@@ -150,39 +150,18 @@ const items = [
     alt: "Nailong",
   },
 ]
-
-items.forEach((item) => inject(item));
-function inject(items) {
-  document.querySelector("parent parent-intro").insertAdjacentHTML(
-    "afterbegin"
-      `<div class="child-1">
-        <img class=”display-img” src=”${items.image}” />
-        <h1 class ="display-title">${items.name}</h1>
-        <h2 class = "display-price">${items.price}</h2>
-        <button class="addCart">Add To Cart</button>
-      </div>`
+  const parent = document.querySelector(".container");
+ document.querySelector(".container").insertAdjacentHTML
+items.forEach((item) => {
+  parent.insertAdjacentHTML(
+    "afterbegin",
+    `
+    <div class="child">
+      <img class="display-img" src="${item.image}" alt="${item.alt}" />
+      <h1 class="display-title">${item.name}</h1>
+      <h2 class="display-price">$${item.price.toFixed(2)}</h2>
+      <button class="addCart">Add To Cart</button>
+    </div>
+  `
   );
-}
-
-addToCart();
-
-function addToCart() {
-  const buttons = document.querySelectorAll("button");
-  const totalDisplay = document.getElementById("total");
-  let total = 0;
-
-
-  buttons.forEach((btn, index) => {
-    btn.addEventListener("click", function () {
-      const item = items[index];
-      total = total + item.price;
-
-      const container = document.querySelector(".cart-total");
-      container.insertAdjacentHTML( "beforeend", `<p>Added: ${item.name} (${item.price})</p>`
-
-      )
-      console.log(`Added ${item.name} ${total}` );
-    });
-  });
-  
-}
+});
