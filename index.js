@@ -2,7 +2,7 @@ const items = [
   // First row
   {
     name: "Labubu",
-    category: "performative",
+    category: "aesthetic",
     price: 74.99,
     image: "img/download.jpg",
     alt: "Labubu",
@@ -16,18 +16,19 @@ const items = [
   },
   {
     name: "Wired Earbuds",
-    category: "performative",
+    category: "aesthetic",
     price: 29.99,
     image: "img/wireless.jpg",
     alt: "Wired Earbuds",
   },
   {
     name: "Clairo Album",
-    category: "performative",
+    category: "aesthetic",
     price: 99.99,
     image: "img/clairo.webp",
     alt: "Clairo Album",
   },
+
 
   // Second row
   {
@@ -59,6 +60,7 @@ const items = [
     alt: "Mustard",
   },
 
+
   // Third row
   {
     name: "Me and the Divas",
@@ -69,7 +71,7 @@ const items = [
   },
   {
     name: "Dubai Chocolate",
-    category: "performative",
+    category: "brainrot",
     price: 19.99,
     image: "img/dubai.jpg",
     alt: "Dubai Chocolate",
@@ -89,63 +91,65 @@ const items = [
     alt: "Normal 67",
   },
 
+
   // Fourth row
   {
     name: "Hachiware",
-    category: "plushie",
+    category: "aesthetic",
     price: 39.99,
     image: "img/hachiware.webp",
     alt: "Hachiware",
   },
   {
     name: "Usagi",
-    category: "plushie",
+    category: "aesthetic",
     price: 39.99,
     image: "img/usagi.png",
     alt: "Usagi",
   },
   {
     name: "Chiikawa",
-    category: "plushie",
+    category: "aesthetic",
     price: 39.99,
     image: "img/chiikawa.webp",
     alt: "Chiikawa",
   },
   {
     name: "Nailong",
-    category: "plushie",
+    category: "aesthetic",
     price: 19.99,
     image: "img/Nailong.jpeg",
     alt: "Nailong",
   },
   {
     name: "Sonny Angel Flower",
-    category: "collectables",
+    category: "aesthetic",
     price: 19.99,
     image: "img/Nailong.jpeg",
     alt: "Nailong",
   },
   {
     name: "Sonny Angel Berry",
-    category: "collectables",
+    category: "aesthetic",
     price: 19.99,
     image: "img/Nailong.jpeg",
     alt: "Nailong",
   },
   {
     name: "Smiski Touch Light",
-    category: "collectables",
+    category: "aesthetic",
     price: 29.99,
     image: "img/Nailong.jpeg",
     alt: "Nailong",
   },
   {
     name: "Smiski Figurine",
-    category: "collectables",
+    category: "aesthetic",
     price: 19.99,
     image: "img/Nailong.jpeg",
     alt: "Nailong",
   },
+<<<<<<< HEAD
 ];
 addToCart();
 
@@ -155,25 +159,22 @@ function addToCart() {
   let total = 0;
 
   buttons.forEach((btn, index) => {
-    btn.addEventListener("click", function () {
+    btn.addEventListener("click",
+ function () {
 
       const item = items[index];
-      total += item.price; //Item Price
-      // I had online help for Item Price calculation and the very bottom
-      totalDisplay.textContent = total.toFixed(2);
+      total = total + item.price;
+  
 
       const container = document.querySelector(".cart-total");
       container.insertAdjacentHTML(
         "beforeend",
-        `<p>${item.name} ($${item.price.toFixed(2)})</p>`
+        `<p>Added: ${item.name})</p>`
       );
 
-      console.log(`Added ${item.name} - new total: $${total.toFixed(2)}`);
-    }
-  );
-
-  }
-);
+      console.log(` ${item.name} - new total: `);
+    });
+  });
 }
 
 
@@ -182,3 +183,22 @@ function addToCart() {
 
 
 
+
+=======
+]
+  const parent = document.querySelector(".container");
+ document.querySelector(".container").insertAdjacentHTML
+items.forEach((item) => {
+  parent.insertAdjacentHTML(
+    "afterbegin",
+    `
+    <div class="child">
+      <img class="display-img" src="${item.image}" alt="${item.alt}" />
+      <h1 class="display-title">${item.name}</h1>
+      <h2 class="display-price">$${item.price.toFixed(2)}</h2>
+      <button class="addCart">Add To Cart</button>
+    </div>
+  `
+  );
+});
+>>>>>>> 7fdf6cf7e1912b4e44a7a93933c1393ce205a542
