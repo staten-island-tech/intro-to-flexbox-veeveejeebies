@@ -150,6 +150,7 @@ const items = [
     alt: "Nailong",
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 addToCart();
 
@@ -185,6 +186,8 @@ function addToCart() {
 
 
 =======
+=======
+>>>>>>> 7fdf6cf7e1912b4e44a7a93933c1393ce205a542
 ]
   const parent = document.querySelector(".container");
  document.querySelector(".container").insertAdjacentHTML
@@ -201,4 +204,7 @@ items.forEach((item) => {
   `
   );
 });
+<<<<<<< HEAD
+>>>>>>> 7fdf6cf7e1912b4e44a7a93933c1393ce205a542
+=======
 >>>>>>> 7fdf6cf7e1912b4e44a7a93933c1393ce205a542
