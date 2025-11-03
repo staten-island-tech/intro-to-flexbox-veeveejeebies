@@ -238,20 +238,32 @@ const items = [
 
 const container = document.querySelector(".container");
 
-// DOM manipulation thing that makes it so you don't need html
-items.forEach((item) => {
-  container.insertAdjacentHTML(
-    "beforeend",
-    `<div class="child">
-<img src="${item.image}">
+// displays the item in the "container"
+function displayItems(list) {
+  container.innerHTML = ""; // clears the old products so that it can start beginning from the start when I clicka button in the later
+  list.forEach((item) => {
+    container.insertAdjacentHTML("beforeend", `
+<div class="child">
+ <img src="${item.image}">
 <h1>${item.name}</h1>
 <h2>$${item.price}</h2>
 <button class="addCart">Add To Cart</button>
- </div>
-  `
-  );
+</div>
+`);
+  });
+  addToCart();
 }
-);
+// display Items as if displays items from the beginning of the page
+displayItems(items);
+// Filter function that connects with the html buttons hence filter(category)
+function filter(category) {
+  const filtered = items.filter(item => item.category === category);
+  displayItems(filtered);
+}
+// show all items when "All" button is clicked
+function showAll() {
+  displayItems(items);
+}
 
 function addToCart() {
   const buttons = document.querySelectorAll(".addCart");
@@ -262,7 +274,7 @@ function addToCart() {
   buttons.forEach((btn, index) => {
     btn.addEventListener("click", function () { //item click makes it add the price and then yaeah
       const item = items[index];
-      total += item.price;
+      total += item.price;         //does the math
       totalDisplay.textContent = `${total}`; // show the total
       cartContainer.insertAdjacentHTML(
         "beforeend",
@@ -271,6 +283,7 @@ function addToCart() {
     });
   });
 }
+
 addToCart();
 
 
