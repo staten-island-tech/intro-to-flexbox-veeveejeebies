@@ -1,3 +1,87 @@
+const style = document.createElement("style");
+style.textContent = `
+.title {
+  background-color: rgb(216, 155, 240);
+  text-align: center;
+  width: 1000px;
+  margin: 100px auto;
+  padding: 0px;
+  font-size: 50px;
+  font-family: "Kranky", serif;
+}
+
+h1 {
+  font-family: "Sigmar", sans-serif;
+  padding-bottom: 10px;
+  font-size: 60px;
+  color: rgb(59, 5, 5);
+  margin-top: 0;
+}
+
+h2 {
+  font-family: "Sigmar", sans-serif;
+  padding-bottom: 10px;
+  font-size: 30px;
+  color: rgb(59, 5, 5);
+  margin-top: 0;
+}
+
+.child {
+  border: 5px solid rgb(213, 162, 234);
+  width: 22%;
+  height: auto;
+  text-align: center;
+  background-color: rgb(251, 204, 255);
+  margin: 15px;
+  border-radius: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.addCart {
+  background-color: rgba(189, 199, 244, 1);
+  border-width: 5px;
+  margin: 10px auto;
+  font-size: 16px;
+}
+
+html, body {
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "Sigmar", sans-serif;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+}
+
+.cart-total {
+  border: 1px solid #f4beff;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #f4d1ff;
+}
+.cart-total h1 {
+  margin-bottom: 10px;
+}
+.cart-total p {
+  margin-bottom: 5px;
+  font-size: large;
+}
+`;
+document.head.appendChild(style);
 const items = [
   // First row
   {
@@ -125,86 +209,71 @@ const items = [
     name: "Sonny Angel Flower",
     category: "aesthetic",
     price: 19.99,
-    image: "img/Nailong.jpeg",
+    image: "img/sonny flower.webp",
     alt: "Nailong",
   },
   {
     name: "Sonny Angel Berry",
     category: "aesthetic",
     price: 19.99,
-    image: "img/Nailong.jpeg",
+    image: "img/sonny strawberries.webp",
     alt: "Nailong",
   },
   {
     name: "Smiski Touch Light",
     category: "aesthetic",
     price: 29.99,
-    image: "img/Nailong.jpeg",
+    image: "img/smiskilamp.jpg",
     alt: "Nailong",
   },
   {
     name: "Smiski Figurine",
     category: "aesthetic",
     price: 19.99,
-    image: "img/Nailong.jpeg",
+    image: "img/smiski figuriene.webp",
     alt: "Nailong",
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 ];
-addToCart();
+
+const container = document.querySelector(".container");
+
+// DOM manipulation thing that makes it so you don't need html
+items.forEach((item) => {
+  container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="child">
+<img src="${item.image}">
+<h1>${item.name}</h1>
+<h2>$${item.price}</h2>
+<button class="addCart">Add To Cart</button>
+ </div>
+  `
+  );
+}
+);
 
 function addToCart() {
-  const buttons = document.querySelectorAll("button");
+  const buttons = document.querySelectorAll(".addCart");
   const totalDisplay = document.getElementById("total");
+  const cartContainer = document.querySelector(".cart-total");
   let total = 0;
 
   buttons.forEach((btn, index) => {
-    btn.addEventListener("click",
- function () {
-
+    btn.addEventListener("click", function () { //item click makes it add the price and then yaeah
       const item = items[index];
-      total = total + item.price;
-  
-
-      const container = document.querySelector(".cart-total");
-      container.insertAdjacentHTML(
+      total += item.price;
+      totalDisplay.textContent = `${total}`; // show the total
+      cartContainer.insertAdjacentHTML(
         "beforeend",
-        `<p>Added: ${item.name})</p>`
+        `<p>Added: ${item.name} (${item.price})</p>` //displays item price and name
       );
-
-      console.log(` ${item.name} - new total: `);
     });
   });
 }
+addToCart();
 
 
 
 
 
-
-
-
-=======
-=======
->>>>>>> 7fdf6cf7e1912b4e44a7a93933c1393ce205a542
-]
-  const parent = document.querySelector(".container");
- document.querySelector(".container").insertAdjacentHTML
-items.forEach((item) => {
-  parent.insertAdjacentHTML(
-    "afterbegin",
-    `
-    <div class="child">
-      <img class="display-img" src="${item.image}" alt="${item.alt}" />
-      <h1 class="display-title">${item.name}</h1>
-      <h2 class="display-price">$${item.price.toFixed(2)}</h2>
-      <button class="addCart">Add To Cart</button>
-    </div>
-  `
-  );
-});
-<<<<<<< HEAD
->>>>>>> 7fdf6cf7e1912b4e44a7a93933c1393ce205a542
-=======
->>>>>>> 7fdf6cf7e1912b4e44a7a93933c1393ce205a542
