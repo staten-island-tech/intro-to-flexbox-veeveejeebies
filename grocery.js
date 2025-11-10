@@ -6,9 +6,18 @@ const cart = [
   { name: "Bananas", price: 1.25, quantity: 6 }
 ];
 
-
 function total(cart) {
+  let total = 0;
+  cart.forEach((item) => {          // You could also use (el) for element because it's more 
+   let itemPrice = item.price;
+    if (itemPrice < 5) {
+      itemPrice = itemPrice - (itemPrice * 0.05);
+    }
+    total += itemPrice * item.quantity;
+  });
 
 
-    return total; //output
+  return total;
 }
+
+console.log("Total:", total(cart));

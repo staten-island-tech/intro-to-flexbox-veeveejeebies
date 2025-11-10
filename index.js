@@ -80,7 +80,7 @@ html, body {
   margin-bottom: 5px;
   font-size: large;
 }
-`;
+`; // my css 
 document.head.appendChild(style);
 const items = [
   // First row
@@ -238,7 +238,7 @@ const items = [
 
 const container = document.querySelector(".container");
 
-// displays the item in the "container"
+// displays the item in the "container" section of my html
 function displayItems(list) {
   container.innerHTML = ""; // clears the old products so that it can start beginning from the start when I clicka button in the later
   list.forEach((item) => {
