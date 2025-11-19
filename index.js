@@ -260,7 +260,7 @@ function filter(category) {
   const filtered = items.filter(item => item.category === category);
   displayItems(filtered);
 }
-// show all items when "All" button is clicked
+// show all items when the "All" button is clicked
 function showAll() {
   displayItems(items);
 }
